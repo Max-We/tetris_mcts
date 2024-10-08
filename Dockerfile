@@ -38,6 +38,8 @@ COPY . .
 # Create data directory
 RUN mkdir -p ./data
 
+# Set the entrypoint to python
+ENTRYPOINT ["python"]
+
 # Set the default command to run your application
-ENTRYPOINT ["python", "play.py"]
-CMD ["--agent_type", "ValueSimLP", "--online", "--ngames", "1000", "--mcts_sims", "100"]
+CMD ["play.py", "--agent_type", "ValueSimLP", "--online", "--ngames", "1000", "--mcts_sims", "100"]

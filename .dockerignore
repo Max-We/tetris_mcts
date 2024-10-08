@@ -5,11 +5,6 @@
 # IDE files
 .idea
 
-# Temporary files and directories
-tmp
-*.tmp
-*.temp
-
 # Python cache files
 __pycache__
 *.pyc
