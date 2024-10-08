@@ -25,12 +25,12 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install llvmlite
-RUN pip install llvmlite==0.29.0
+RUN pip install --no-cache-dir llvmlite==0.29.0
 
 # Clone and install pyTetris
 RUN git clone https://github.com/hrpan/pyTetris.git && \
     cd pyTetris && \
-    pip install .
+    pip install --no-cache-dir  .
 
 # Copy application code
 COPY . .
