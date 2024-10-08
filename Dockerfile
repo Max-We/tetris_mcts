@@ -35,5 +35,9 @@ RUN git clone https://github.com/hrpan/pyTetris.git && \
 # Copy application code
 COPY . .
 
+# Create data directory
+RUN mkdir -p ./data
+
 # Set the default command to run your application
-#CMD ["python", "play.py", "--agent_type", "ValueSimLP", "--online", "--ngames", "1000", "--mcts_sims", "100"]
+ENTRYPOINT ["python", "play.py"]
+CMD ["--agent_type", "ValueSimLP", "--online", "--ngames", "1000", "--mcts_sims", "100"]
