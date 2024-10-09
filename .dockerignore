@@ -1,0 +1,22 @@
+# Version control
+.git
+.gitignore
+
+# IDE files
+.idea
+
+# Python cache files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv
+env
+
+# Log files
+*.log
+
+# Results and output directories
+results

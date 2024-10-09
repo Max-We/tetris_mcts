@@ -25,9 +25,16 @@ However, such handcrafted rewards can bias your agents toward the target you set
 
 ## Prerequisite
 
-See `requirements.txt`
+See `requirements.txt` to install this project from source.
 
 You'll also need the Tetris environment from [here](https://github.com/hrpan/pyTetris), and the Python/C++ binding library [pybind11](https://github.com/pybind/pybind11).
+
+Alternatively, you can use the Dockerfile provided in this repository.
+
+```text
+docker build -f Dockerfile -t tetris-mcts .
+docker run --gpus all tetris-mcts
+```
 
 ## Training your agent
 
